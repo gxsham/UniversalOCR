@@ -1,0 +1,84 @@
+﻿@model Result
+@{
+    ViewData["Title"] = "Result";
+}
+
+
+<head>
+    <link rel="stylesheet" href="~/css/backbutton.css" />
+    <style>
+        h1 {
+            color: #ffffff;
+            font-family: 'Lato', sans-serif;
+            font-size: 54px;
+            font-weight: 300;
+            line-height: 58px;
+            margin: 0 0 58px;
+        }
+
+
+        body {
+            background: #181818;
+            overflow-y: scroll;
+            max-width: 40em;
+            padding: 1em;
+            margin: 10% auto;
+            position: relative;
+        }
+
+        p {
+            color: #adb7bd;
+            font-family: 'Lucida Sans', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 26px;
+            text-indent: 30px;
+            margin: 0;
+            white-space: pre-wrap;
+        }
+
+
+        a {
+            color: #fe921f;
+        }
+
+
+            a:hover {
+                color: #ffffff
+            }
+
+
+        .date {
+            background: #fe921f;
+            color: #ffffff;
+            display: inline-block;
+            font-family: 'Lato', sans-serif;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 12px;
+            letter-spacing: 1px;
+            margin: 0 0 30px;
+            padding: 10px 15px 8px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    @if (Model.Success == true)
+    {
+        <h2 class="date" style="background-color:limegreen">Success</h2>
+    }
+    else
+    {
+        <h2 class="date" style="background-color:crimson">Error</h2>
+    }
+    <h1 class="date">Processed in: @Model.ExecutionTime</h1>
+    <p>@Model.Text</p>
+
+
+    <div class="wrapper">
+        <span class="square">
+            <a class="tenth before after"asp-controller="Home" asp-action="Index" style=" font-family:'Open Sans', sans-serif;">Back</a>
+        </span>
+     </div>
+</body>

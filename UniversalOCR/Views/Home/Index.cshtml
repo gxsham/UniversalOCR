@@ -1,0 +1,33 @@
+﻿@model UniversalOCR.FileViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="~/css/upload2.css" />
+    <link rel="stylesheet" href="~/css/button.css"/>
+    <link rel="stylesheet" href="~/css/dropdown.css" />
+    <script src="~/js/upload2.js"></script>
+    <script src="~/js/dropdown.js"></script>
+</head>
+
+
+
+<body>
+    <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Index">
+
+        <label for="custom-file-upload" class="filupp">
+            <span class="filupp-file-name js-value">Browse Files</span>
+            <input type="file" name="File" value="1" id="custom-file-upload" />
+        </label>  
+               @Html.DropDownListFor(m => m.Language, ViewBag.Languages as SelectList, "ron", new { style = "background: #4f5b52;  padding-left:1em;  color: #fff; outline: none; cursor: pointer;   font-weight: 400; width: 27.5em; height: 3.5em;" })
+
+           <button type="submit" class="button  arrow">Process</button>
+    </form>
+</body>
+
+
+<p>Supported Formats: .txt .pdf .doc .docx .xls .xlsx .ppt pptx .rtf .bmp .png .png .jfif .jpeg .tiff</p>
