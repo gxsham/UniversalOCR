@@ -16,6 +16,9 @@
     <Content Include="wwwroot\css\upload.css" />
     <Content Include="wwwroot\css\upload.sass" />
     <Content Include="wwwroot\css\upload2.css" />
+    <Content Include="wwwroot\images\GitHub-Mark-64px.png" />
+    <Content Include="wwwroot\images\GitHub-Mark-Light-32px.png" />
+    <Content Include="wwwroot\images\octobiwan.jpg" />
     <Content Include="wwwroot\js\button.js" />
     <Content Include="wwwroot\js\jquery.fileuploader.min.js" />
     <Content Include="wwwroot\js\upload.js" />
@@ -532,6 +535,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="wwwroot/images\GitHub-Mark-Light-32px.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>
